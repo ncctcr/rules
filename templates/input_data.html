@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page input_data</title>
+</head>
+<body>
+<form action="ask/" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+{#        <input name = "gender" placeholder="gender"><br/>#}
+        <select name="gender">
+            <option>
+                male
+            </option>
+            <option>
+                female
+            </option>
+        </select><br/>
+        <input type="number" min="18" max="99" name = "age" placeholder="age"><br />
+{#        <input name = "abdominal_pain" placeholder="abdominal_pain"><br />#}
+        <select name="abdominal_pain">
+            <option>
+                yes
+            </option>
+            <option>
+                no
+            </option>
+        </select><br/>
+        <input name = "systolic_bp" type="number" min="60" max="300" placeholder="systolic_bp"><br />
+        <input name = "diastolic_bp" type="number" min="30" max="250" placeholder="diastolic_bp"><br />
+
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-block btn-primary">Send</button>
+    </div>
+</form>
+
+{#<ul>#}
+{#    {% for ask_question in AskQuestions %}#}
+{#        <li>{{ ask_question.gender }}</li>#}
+{#    {% endfor %}#}
+{#</ul>#}
+
+</body>
+</html>
